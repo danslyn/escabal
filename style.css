@@ -75,9 +75,51 @@ body {
   position: absolute;   /* or fixed if you want it pinned */
  bottom: -50px;            /* vertical position */
   left: -200px;         /* start off-screen to the left */
-  width: 450px;         /* cloud size */
+  width: 400;  
+  height: 200px;       /* cloud size */
   z-index: 3;
   animation: moveClouds 20s linear infinite;
+  opacity: 70%;
+}
+
+.cloud3 {
+  position: absolute;   /* or fixed if you want it pinned */
+ bottom: -50px;            /* vertical position */
+  left: -180px;         /* start off-screen to the left */
+  width: 400;  
+  height: 200px;       /* cloud size */
+  z-index: 3;
+  animation: moveClouds 5s linear infinite;
+  opacity: 70%;
+}
+.cloud4 {
+  position: absolute;   /* or fixed if you want it pinned */
+ bottom: -50px;            /* vertical position */
+  left: -160px;         /* start off-screen to the left */
+  width: 400;  
+  height: 200px;       /* cloud size */
+  z-index: 3;
+  animation: moveClouds 4s linear infinite;
+  opacity: 70%;
+}
+.cloud5 {
+  position: absolute;   /* or fixed if you want it pinned */
+ bottom: -50px;            /* vertical position */
+  left: -1400px;         /* start off-screen to the left */
+  width: 400;  
+  height: 200px;       /* cloud size */
+  z-index: 3;
+  animation: moveClouds 35s linear infinite;
+  opacity: 70%;
+}
+.cloud6 {
+  position: absolute;   /* or fixed if you want it pinned */
+ bottom: -50px;            /* vertical position */
+  left: -100px;         /* start off-screen to the left */
+  width: 400;  
+  height: 200px;       /* cloud size */
+  z-index: 3;
+  animation: moveClouds 40s linear infinite;
   opacity: 70%;
 }
 
@@ -115,7 +157,8 @@ body {
   background-color: #ffffff;  /* white background */
   border: 2px solid #333;     /* dark border */
   border-radius: 10px;        /* rounded corners */
-  width: 400px;               /* fixed size */
+  width: 400px;   
+  color: #333;            /* fixed size */
   margin: 40px auto;          /* center horizontally */
   text-align: center;         /* center content */
   box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* subtle shadow */

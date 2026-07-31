@@ -48,6 +48,16 @@ body {
   animation: flyright 35s linear infinite;
 }
 
+.birds {
+  position: absolute;   /* or fixed if you want it pinned */
+ bottom: 280px;          /* vertical position */
+  right:-200px;         /* start off-screen to the left */
+  width: 50px;         /* cloud size */
+  z-index: 3;
+  transform: scaleX(-1);
+  animation: flyright 33s linear infinite;
+}
+
 @keyframes flyright {
 
     from { right: -200px; }
@@ -166,7 +176,7 @@ body {
 
 .invitation .celebrant-name {
 
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: CharlemagneStd-Bold;
     font-size: 50px;
     color: #410dcf;
 }

@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  text-align: center;
+  background: #1a1a1a;
+  overflow: hidden;
+}
+
+
+body {
+    background-image: url('sky.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.corner-image {
+  position: absolute;   /* stays in place even when scrolling */
+ bottom: 10px;        /* distance from top */
+  right: 20px;       /* distance from right */
+  width: 600px;      /* adjust size */
+  height: auto;
+  z-index: 3;
+  border-radius: 8px; /* optional styling */
+   animation: swingFloat 8s ease-in-out infinite;
+}
+
+@keyframes swingFloat {
+  0%   { transform: rotate(10deg) translateY(0); }
+  25%  { transform: rotate(15deg) translateY(-15px); }
+  50%  { transform: rotate(10deg) translateY(10); }
+  75%  { transform: rotate(-15deg) translateY(-15px); }
+  100% { transform: rotate(10deg) translateY(0); }
+}
+/* BIRD-FLYING*/
+
+
+.bird {
+  position: absolute;   /* or fixed if you want it pinned */
+ bottom: 300px;          /* vertical position */
+  right:-200px;         /* start off-screen to the left */
+  width: 50px;         /* cloud size */
+  z-index: 3;
+  transform: scaleX(-1);
+  animation: flyright 35s linear infinite;
+}
+
+@keyframes flyright {
+
+    from { right: -200px; }
+  to   { right: 100%; }
+}
+
+/* CLOUDS */
+
+.cloud2 {
+  position: absolute;   /* or fixed if you want it pinned */
+ top: 200px;          /* vertical position */
+  left: -200px;         /* start off-screen to the left */
+  width: 200px;         /* cloud size */
+  opacity: 70%;
+  animation: moveCloud 10s linear infinite;
+
+}
+
+@keyframes moveCloud {
+  from { transform: translateX(0); }
+  to   { transform: translateX(120vw); } /* move across screen */
+}
+
+.cloud {
+  position: absolute;   /* or fixed if you want it pinned */
+ bottom: -50px;            /* vertical position */
+  left: -200px;         /* start off-screen to the left */
+  width: 450px;         /* cloud size */
+  z-index: 3;
+  animation: moveClouds 20s linear infinite;
+  opacity: 70%;
+}
+
+@keyframes moveClouds {
+  from { transform: translateX(0); }
+  to   { transform: translateX(120vw); } /* move across screen */
+}
+
+
+
+/* Glowing SUNG*/
+
+.sun {
+  position: fixed;       /* stays in place */
+  top: 50px;             /* adjust vertical position */
+  left: 50px;           /* adjust horizontal position */
+  width: 220px;          /* sun size */
+  height: 220px;
+  opacity: 80%;
+  background: radial-gradient(circle, #FFD700 60%, #ffdd50 100%);
+  border-radius: 50%;    /* makes it a circle */
+  box-shadow: 
+    0 0 30px 15px #ffdd50,  /* inner glow */
+    0 0 60px 30px #ffdd50,  /* outer glow */
+    0 0 100px 50px #ffdd50;  /* extended glow */
+}
+
+
+
+
+.invitation {
+  position: relative;
+  z-index: 2;
+  padding: 30px;              /* more breathing room */
+  background-color: #ffffff;  /* white background */
+  border: 2px solid #333;     /* dark border */
+  border-radius: 10px;        /* rounded corners */
+  width: 400px;               /* fixed size */
+  margin: 40px auto;          /* center horizontally */
+  text-align: center;         /* center content */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* subtle shadow */
+}
+
+.invitation .celebrant-name {
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    color: #FFD700;
+}
+.celebrant-photo {
+  width: 200px;
+
+  align-items: left;
+}
+
+.background div {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  animation: float 10s infinite linear;
+}
+
+.balloon { background-image: url('balloon.png'); left: 10%; animation-duration: 12s; }
+.confetti { background-image: url('confetti.png'); left: 40%; animation-duration: 8s; }
+.gift { background-image: url('gift.png'); left: 70%; animation-duration: 15s; }
+
+@keyframes float {
+  from { top: 100%; }
+  to { top: -10%; }
+}
+
+#countdown {
+  font-size: 1.5em;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+
+

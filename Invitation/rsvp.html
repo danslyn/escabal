@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSVP - Birthday Invitation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="rsvp-container">
+    <h2>RSVP for Alex Johnson's Birthday</h2>
+    <form id="rsvpForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="status">Will you attend?</label>
+      <select id="status" required>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        <option value="maybe">Maybe</option>
+      </select>
+
+      <label for="message">Message (optional):</label>
+      <textarea id="message"></textarea>
+
+      <button type="submit">Submit RSVP</button>
+    </form>
+
+    <div id="confirmation"></div>
+    <h3>Confirmed Guests</h3>
+    <ul id="guestList"></ul>
+  </main>
+  <script src="rsvp.js"></script>
+</body>
+</html>

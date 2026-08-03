@@ -5,6 +5,8 @@ body {
   text-align: center;
   background: #1a1a1a;
   overflow: hidden;
+  max-width: 100%;
+  max-height: 100px;
 }
 
 
@@ -19,9 +21,9 @@ body {
 
 .corner-image {
   position: absolute;   /* stays in place even when scrolling */
- bottom: 10px;        /* distance from top */
-  right: 20px;       /* distance from right */
-  width: 600px;      /* adjust size */
+  top: 15px;        /* distance from top */
+  right: 50px;       /* distance from right */
+  width: 300px;      /* adjust size */
   height: auto;
   z-index: 3;
   border-radius: 8px; /* optional styling */
@@ -146,15 +148,8 @@ body {
   position: fixed;       /* stays in place */
   top: 50px;             /* adjust vertical position */
   left: 50px;           /* adjust horizontal position */
-  width: 220px;          /* sun size */
-  height: 220px;
-  opacity: 80%;
-  background: radial-gradient(circle, #FFD700 60%, #ffdd50 100%);
-  border-radius: 50%;    /* makes it a circle */
-  box-shadow: 
-    0 0 30px 15px #ffdd50,  /* inner glow */
-    0 0 60px 30px #ffdd50,  /* outer glow */
-    0 0 100px 50px #ffdd50;  /* extended glow */
+  width: 250px;          /* sun size */
+  height: 250px;
 }
 
 
@@ -164,27 +159,65 @@ body {
   position: relative;
   z-index: 2;
   padding: 30px;              /* more breathing room */
-  background-color: #ffffff;  /* white background */
-  border: 2px solid #333;     /* dark border */
+   /*background-color: #ffffff;   white background 
+  border: 2px solid #333;      dark border */
   border-radius: 10px;        /* rounded corners */
-  width: 400px;   
-  color: #333;            /* fixed size */
+  width: 400px;               /* fixed size */
   margin: 40px auto;          /* center horizontally */
   text-align: center;         /* center content */
   box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* subtle shadow */
+
 }
+
+.invitation .event-location {
+      font-family: CharlemagneStd-Bold;
+    font-size: 50px;
+    color: #f7f7f7;
+     
+}
+
+.invitation .event-location a{
+   text-decoration: none;
+    color: #f7f7f7;
+}
+
+.invitation .event-location:hover a{
+color:#077e11;
+   text-decoration: none;
+}
+
 
 .invitation .celebrant-name {
-
     font-family: CharlemagneStd-Bold;
     font-size: 50px;
-    color: #410dcf;
+    color: #cfb20d;
 }
-.celebrant-photo {
+
+.invitation #countdown {
+    font-family: CharlemagneStd-Bold;
+    font-size: 50px;
+    color: #cf0d0d;
+}
+
+
+
+
+
+
+/*.celebrant-photo {
   width: 200px;
 
   align-items: left;
+}*/
+
+.celebrant-photo{
+    position: absolute;
+    left: -250px;      /* move image outside the box */
+    top: -50px;       /* adjust vertically */
+    width: 450px;
+    z-index: 10;      /* higher than textbox */
 }
+
 
 .background div {
   position: absolute;

@@ -18,6 +18,7 @@ body {
     background-attachment: fixed;
 }
 .map-container{
+
     width:650px;
     height:350px;
     border-radius:25px;
@@ -37,6 +38,7 @@ body {
 
 
 .corner-image {
+    opacity: 70%;
   position: absolute;   /* stays in place even when scrolling */
   top: 15px;        /* distance from top */
   right: 50px;       /* distance from right */
@@ -167,65 +169,117 @@ body {
   left: 50px;           /* adjust horizontal position */
   width: 250px;          /* sun size */
   height: 250px;
+  opacity: 70%;
 }
 
 
 
 
 .invitation {
+    position: relative;
+    z-index: 2;
+  background-color: rgba(27, 16, 1, 0.5);
+  
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    height: 500px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 3px dashed #cfb20d;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+ .celebrant-name {
+    margin: 0;
+    line-height: 1;
   position: relative;
-  z-index: 2;
-  padding: 30px;              /* more breathing room */
-   /*background-color: #ffffff;   white background 
-  border: 2px solid #333;      dark border */
-  border-radius: 10px;        /* rounded corners */
-  width: 400px;               /* fixed size */
-  margin: 40px auto;          /* center horizontally */
-  text-align: center;         /* center content */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* subtle shadow */
-
-}
-
-.invitation .event-location {
-      font-family: CharlemagneStd-Bold;
+   align-items: center;
+  font-family: "Sis";
+  width: 550px;
     font-size: 50px;
+    color:  #e2b216;
+      border: 3px dashed #cfb20d;
+    border-radius: 10px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+
+.info {
+
+    width: 80%;
+     text-align: center;
+}
+
+.event-location {
+    font-size: 15px;
     color: #f7f7f7;
-     
+    margin: 10px 0;
 }
 
-.invitation .event-location a{
-   text-decoration: none;
-    color: #f7f7f7;
-}
-
-.invitation .event-location:hover a{
-color:#077e11;
-   text-decoration: none;
-}
-
-
-.invitation .celebrant-name {
-    font-family: CharlemagneStd-Bold;
-    font-size: 50px;
+.event-location a {
+ 
+    font-family: "Sis";
+  font-size: 30px;
+    text-decoration: none;
     color: #cfb20d;
+    display: inline-block;
+    transition: transform 0.25s ease, color 0.25s ease;
+    font-weight: bold;
 }
 
-.invitation #countdown {
-    font-family: CharlemagneStd-Bold;
-    font-size: 50px;
-    color: #cf0d0d;
+.event-location a:hover {
+   transform: scale(1.08);
+    color: #ffffff;
 }
 
+.where-label {
+    margin-top: 5px;
+    font-size: 16px;
+}
+.celeb-label {
+  font-size: 20px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    line-height: 1;
+}
 
+.when-label {
+    margin-top: 5px;
+    font-size: 16px;
+}
+.when-label {
+    margin: 0px auto 0px;
+    font-size: 16px;
+}
+.event-time {
+    font-family: "Sis";
+    font-size: 30px;
+    color: #cfb20d;
+    font-weight: bold;
+    margin: 10px 0;
+}
 
+@font-face {
+    font-family: "Sis";
+    src: url("fonts/Sis.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 
+ #countdown {
+    padding-left: 30px;
+    font-family: "Sis";
+    font-size: 60px;
+      margin-top: 15px;
+     color: #f80c0c;;
+}
 
-
-/*.celebrant-photo {
-  width: 200px;
-
-  align-items: left;
-}*/
 
 .celebrant-photo{
     position: absolute;
@@ -235,28 +289,11 @@ color:#077e11;
     z-index: 10;      /* higher than textbox */
 }
 
-
-.background div {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-size: cover;
-  animation: float 10s infinite linear;
-}
-
-.balloon { background-image: url('balloon.png'); left: 10%; animation-duration: 12s; }
-.confetti { background-image: url('confetti.png'); left: 40%; animation-duration: 8s; }
-.gift { background-image: url('gift.png'); left: 70%; animation-duration: 15s; }
-
-@keyframes float {
-  from { top: 100%; }
-  to { top: -10%; }
-}
-
-#countdown {
-  font-size: 1.5em;
-  margin-top: 15px;
-  font-weight: bold;
+.divider {
+    width: 20%;
+    border: none;
+    border-top: 2px dashed #1d8503;
+    margin: 10px auto;
 }
 
 

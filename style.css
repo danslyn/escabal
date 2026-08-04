@@ -1,21 +1,22 @@
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  color: #fff;
-  text-align: center;
-  background: #1a1a1a;
-  overflow: hidden;
-  max-width: 100%;
-  max-height: 100px;
-}
+    margin: 0;
+    padding: 0;
 
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+    text-align: center;
 
-body {
     background-image: url('sky.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    width: 100%;
+    min-height: 100vh;
 }
 .map-container{
 
@@ -250,10 +251,13 @@ body {
 }
 
 .when-label {
+  line-height: 1;
+   font-size: 20px;
     margin-top: 5px;
     font-size: 16px;
 }
 .when-label {
+   font-size: 20px;
     margin: 0px auto 0px;
     font-size: 16px;
 }
@@ -298,3 +302,296 @@ body {
 
 
 
+/* =====================================================
+   MOBILE RESPONSIVE DESIGN
+   ===================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* PAGE */
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        background-size: cover;
+        background-position: center top;
+        background-attachment: scroll;
+    }
+
+
+    /* =========================
+       SUN
+       ========================= */
+
+    .sun {
+        position: absolute;
+        top: 20px;
+        left: 15px;
+
+        width: 140px;
+        height: 140px;
+
+        opacity: 0.7;
+        z-index: 1;
+    }
+
+
+    /* =========================
+       INVITATION BOX
+       ========================= */
+
+    .invitation {
+        position: relative;
+
+        width: calc(100% - 20px);
+        max-width: 600px;
+
+        height: auto;
+        min-height: 500px;
+
+        margin: 480px auto 100px;
+
+        padding: 20px 15px;
+
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-color: rgba(27, 16, 1, 0.5);
+
+        border: 3px dashed #cfb20d;
+        border-radius: 10px;
+
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+        overflow: visible;
+    }
+
+
+    /* =========================
+       BABY
+       ========================= */
+
+    .celebrant-photo {
+        position: absolute;
+
+        width: 300px;
+        max-width: 80vw;
+        height: auto;
+
+        left: 50%;
+        top: -450px;
+
+        transform: translateX(-50%);
+
+        z-index: 10;
+    }
+
+
+    /* =========================
+       CONTENT
+       ========================= */
+
+    .info {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+
+    /* =========================
+       NAME
+       ========================= */
+
+    .celebrant-name {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        margin: 0;
+        padding: 8px 5px;
+
+        font-size: clamp(28px, 7vw, 50px);
+
+        line-height: 1;
+
+        text-align: center;
+
+        white-space: normal;
+        overflow-wrap: break-word;
+
+        color: #e2b216;
+
+        border: 3px dashed #cfb20d;
+        border-radius: 10px;
+
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+
+    /* =========================
+       CELEBRANT LABEL
+       ========================= */
+
+    .celeb-label {
+        font-size: 18px;
+
+        margin-top: 8px;
+        margin-bottom: 50px;
+
+        line-height: 1;
+    }
+
+
+    /* =========================
+       LOCATION
+       ========================= */
+
+    .event-location {
+        width: 100%;
+        font-size: 15px;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+
+    .event-location a {
+        font-family: "Sis";
+        font-size: clamp(20px, 5vw, 30px);
+        line-height: 1.1;
+        display: inline-block;
+        max-width: 100%;
+        color: #cfb20d;
+        text-decoration: none;
+        overflow-wrap: break-word;
+        transition:
+            transform 0.25s ease,
+            color 0.25s ease;
+    }
+
+
+    .event-location a:hover {
+        transform: scale(1.05);
+        color: #ffffff;
+    }
+
+
+    /* =========================
+       WHERE
+       ========================= */
+
+    .where-label {
+        margin-top: 5px;
+        font-size: 16px;
+    }
+
+
+    /* =========================
+       DIVIDER
+       ========================= */
+
+    .divider {
+        width: 20%;
+        margin: 10px auto;
+        border: none;
+        border-top: 2px dashed #1d8503;
+    }
+
+
+    /* =========================
+       WHEN
+       ========================= */
+
+    .when-label {
+        font-size: 16px;
+        margin: 5px 0;
+        line-height: 1;
+    }
+
+
+    /* =========================
+       EVENT DATE
+       ========================= */
+
+    .event-time {
+        width: 100%;
+        box-sizing: border-box;
+        font-family: "Sis";
+        font-size: clamp(20px, 5vw, 30px);
+        line-height: 1.1;
+        color: #cfb20d;
+        font-weight: bold;
+        margin: 10px 0;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+
+    /* =========================
+       COUNTDOWN
+       ========================= */
+
+    #countdown {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 5px;
+        margin-top: 15px;
+        font-family: "Sis";
+        font-size: clamp(30px, 8vw, 60px);
+        line-height: 1;
+        color: #f80c0c;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+
+    /* =========================
+       CLOUDS
+       ========================= */
+
+    .cloud,
+    .cloud3,
+    .cloud4,
+    .cloud5,
+    .cloud6 {
+        width: 300px;
+        height: auto;
+
+        max-width: 70vw;
+
+        bottom: -495px;
+    }
+
+
+    /* =========================
+       BIRDS
+       ========================= */
+
+    .bird,
+    .birds {
+        width: 40px;
+    }
+
+
+    /* =========================
+       CORNER IMAGE
+       ========================= */
+
+    .corner-image {
+        width: 150px;
+
+        right: 10px;
+        top: 10px;
+    }
+}

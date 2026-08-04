@@ -313,7 +313,7 @@ body {
         margin: 0;
         padding: 0;
         width: 100%;
-        min-height: 100vh;
+        min-height: 80vh;
         overflow-x: hidden;
         overflow-y: auto;
 
@@ -335,7 +335,7 @@ body {
         width: 140px;
         height: 140px;
 
-        opacity: 0.7;
+       opacity: 100%;
         z-index: 1;
     }
 
@@ -567,10 +567,9 @@ body {
     .cloud6 {
         width: 300px;
         height: auto;
-
         max-width: 70vw;
-
-        bottom: -495px;
+        bottom: 150px;
+        z-index: 1;
     }
 
 
@@ -590,8 +589,9 @@ body {
 
     .corner-image {
         width: 150px;
-
+        opacity: 100%;
         right: 10px;
         top: 10px;
+        z-index: 1;
     }
 }

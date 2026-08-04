@@ -39,7 +39,6 @@ body {
 
 
 .corner-image {
-    opacity: 70%;
   position: absolute;   /* stays in place even when scrolling */
   top: 15px;        /* distance from top */
   right: 50px;       /* distance from right */
@@ -170,7 +169,6 @@ body {
   left: 50px;           /* adjust horizontal position */
   width: 250px;          /* sun size */
   height: 250px;
-  opacity: 70%;
 }
 
 
@@ -334,8 +332,6 @@ body {
 
         width: 140px;
         height: 140px;
-
-       opacity: 100%;
         z-index: 1;
     }
 
@@ -589,7 +585,6 @@ body {
 
     .corner-image {
         width: 150px;
-        opacity: 100%;
         right: 10px;
         top: 10px;
         z-index: 1;

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes or No</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family:'Sis';
+            background: #4db3c3;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+
+            padding: 40px 20px;
+
+            text-align: center;
+
+            background: white;
+            border-radius: 20px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+            width: 120px;
+            padding: 15px 20px;
+
+            border: none;
+            border-radius: 10px;
+
+            font-size: 20px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: transform 0.2s ease;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        .yes {
+            background: #28a745;
+            color: white;
+        }
+
+        .no {
+            background: #dc3545;
+            color: white;
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+
+            .container {
+                width: 90%;
+                padding: 30px 15px;
+            }
+
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            button {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Are you attending?</h1>
+
+        <div class="buttons">
+
+            <button class="yes" onclick="answerYes()">
+                YES
+            </button>
+
+            <button class="no" onclick="answerNo()">
+                NO
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        function answerYes() {
+            alert("Thank you! We are happy you can attend! 🎉");
+        }
+
+        function answerNo() {
+            alert("Thank you for letting us know.");
+        }
+    </script>
+
+</body>
+</html>

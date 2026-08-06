@@ -1,63 +1,68 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Birthday Invitation</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+  <link rel="stylesheet" href="sending.css">
 </head>
 <body>
 
-  <div class="maintitle">
-     
-  </div>
+<h1>Reservation purpose</h1>
+<form id="rsvpForm"
+      action="https://formspree.io/f/meajjbgb"
+      method="POST">
 
-<div class="sun">
-    <img src="image/sun_transparent.gif" alt="bird" class="sun">
+    <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+    >
+
+    <div class="attendance-buttons">
+
+        <button
+            type="button"
+            class="rsvp-button"
+            data-attendance="YES">
+            YES
+        </button>
+
+        <button
+            type="button"
+            class="rsvp-button"
+            data-attendance="NO">
+            NO
+        </button>
+
+    </div>
+
+    <input
+        type="hidden"
+        name="attendance"
+        id="attendance"
+    >
+
+</form>
+
+<div id="sendingPopup" class="sending-popup">
+
+    <div class="sending-box">
+
+        <div class="loader"></div>
+
+        <h3>Sending...</h3>
+
+        <p>
+            Please wait while we record your response.
+        </p>
+
+    </div>
+
 </div>
 
-  <main class="invitation">
-    <img src="unofront.png" alt="Celebrant" class="celebrant-photo">
-<h1 class="celebrant-name">YUNO AYZEN S. ESCABAL</h1>
- <div class="celeb-label">Celebrant</div>
-<div class="info">
- 
-    <div class="event-location">
-        <a href="location.html">Cardona Christian Church</a>
-        <hr class="divider">
-        <div class="where-label">Where</div>
-    </div>
-<br>
-    <div class="event-time">
-      September 28, 2026 — 10:00 AM
-    </div>
-    <hr class="divider">
-         <div class="when-label">When</div>
-
-    <div id="countdown"></div>
-      <hr class="divider">
-<div class="when-label">Countdown</div>
-</div>
-  </main>
-
+<script src="email.js"></script>
   
-<img src="image/house1.png" alt="My Photo" class="corner-image">
-
-    <img src="image/c1.png" alt="Cloud" class="cloud">
-    <img src="image/c1.png" alt="Cloud" class="cloud2">
-    <img src="image/c1.png" alt="Cloud" class="cloud3">
-    <img src="image/c1.png" alt="Cloud" class="cloud4">
-    <img src="image/c1.png" alt="Cloud" class="cloud5">
-    <img src="image/c1.png" alt="Cloud" class="cloud6">
-     <img src="image/bird-flying.gif" alt="bird" class="bird">
-     <img src="image/bird-flying.gif" alt="bird" class="birds">
-
-<audio autoplay loop hidden>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
-
-
-  <script src="script.js"></script>
 </body>
 </html>

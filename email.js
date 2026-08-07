@@ -128,3 +128,53 @@ document.addEventListener("mousemove", function(e) {
         noButton.style.top = randomY + "px";
     }
 });
+
+const darkOverlay = document.getElementById("darkOverlay");
+
+document.addEventListener("mousemove", function (e) {
+
+    const element = document.elementFromPoint(e.clientX, e.clientY);
+
+    // Only protect the name input and RSVP buttons
+    const protectedArea = element.closest(
+        ".form input, .rsvp-button"
+    );
+
+    if (protectedArea) {
+
+        // Hide the reveal circle
+        const hiddenMask =
+            "radial-gradient(circle 0px at 50% 50%, transparent 0%, #000 0%)";
+
+        darkOverlay.style.webkitMaskImage = hiddenMask;
+        darkOverlay.style.maskImage = hiddenMask;
+
+        return;
+    }
+
+    // Show reveal circle everywhere else
+    const x = e.clientX;
+    const y = e.clientY;
+
+    const mask = `
+        radial-gradient(
+            circle 180px at ${x}px ${y}px,
+            transparent 0%,
+            transparent 60%,
+            black 100%
+        )
+    `;
+
+    darkOverlay.style.webkitMaskImage = mask;
+    darkOverlay.style.maskImage = mask;
+});
+
+const nameInput = document.getElementById("name");
+
+nameInput.addEventListener("invalid", function () {
+    this.setCustomValidity("Uy! Ilagay mo muna pangalan mo. 😆");
+});
+
+nameInput.addEventListener("input", function () {
+    this.setCustomValidity("");
+});

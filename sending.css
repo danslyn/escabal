@@ -307,3 +307,210 @@ body {
 
     transition: clip-path 0.1s ease;
 }
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+
+    .invitation-text {
+        width: 85%;
+        max-width: 650px;
+        font-size: 24px;
+        margin: 35px auto;
+        padding: 12px;
+        border-radius: 35px;
+    }
+
+    .invitation-text h2 {
+        margin-top: 5px;
+    }
+
+    .tara {
+        margin-top: 35px;
+        font-size: 26px;
+    }
+
+    .form input {
+        width: 80%;
+        max-width: 550px;
+        height: 48px;
+        font-size: 18px;
+        margin: 30px auto 10px;
+    }
+
+    .attendance-buttons {
+        gap: 15px;
+    }
+
+    .rsvp-button {
+        width: 130px;
+        padding: 11px;
+    }
+
+    .sending-box {
+        width: 70%;
+        max-width: 280px;
+    }
+
+    .error-popup-box {
+        width: 70%;
+        max-width: 320px;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE PHONES
+   ======================================== */
+
+@media (max-width: 480px) {
+
+    body {
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    /* Invitation */
+    .invitation-text {
+        width: 82%;
+        max-width: none;
+
+        margin: 20px auto;
+
+        padding: 10px 8px;
+
+        font-size: 17px;
+        line-height: 1.25;
+
+        border-radius: 25px;
+        border-width: 4px;
+    }
+
+    .invitation-text h2 {
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    /* "Ano tara? Tara!" */
+    .tara {
+        margin-top: 30px;
+        margin-bottom: 5px;
+
+        font-size: 22px;
+    }
+
+    /* Name input */
+    .form {
+        width: 100%;
+    }
+
+    .form input {
+        box-sizing: border-box;
+
+        width: 85%;
+        max-width: none;
+
+        height: 45px;
+
+        margin: 25px auto 10px;
+
+        font-size: 16px;
+        padding: 0 15px;
+    }
+
+    /* YES / NO buttons */
+    .attendance-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 12px;
+
+        width: 100%;
+    }
+
+    .rsvp-button {
+        width: 115px;
+        padding: 10px;
+
+        font-size: 14px;
+    }
+
+    /* Sending popup */
+    .sending-box {
+        box-sizing: border-box;
+
+        width: 85%;
+        max-width: 280px;
+
+        padding: 25px 20px;
+    }
+
+    .sending-box h3 {
+        font-size: 21px;
+    }
+
+    .sending-box p {
+        font-size: 14px;
+    }
+
+    /* Error popup */
+    .error-popup-box {
+        box-sizing: border-box;
+
+        width: 85%;
+        max-width: 320px;
+
+        padding: 25px 20px;
+    }
+
+    /* Background image */
+    .background-reveal {
+        background-size: cover;
+        background-position: center;
+    }
+
+}
+
+
+/* ========================================
+   VERY SMALL PHONES
+   ======================================== */
+
+@media (max-width: 360px) {
+
+    .invitation-text {
+        width: 88%;
+        font-size: 15px;
+        padding: 8px 5px;
+        border-radius: 20px;
+    }
+
+    .tara {
+        font-size: 20px;
+        margin-top: 25px;
+    }
+
+    .form input {
+        width: 90%;
+        height: 42px;
+        font-size: 14px;
+    }
+
+    .attendance-buttons {
+        gap: 8px;
+    }
+
+    .rsvp-button {
+        width: 105px;
+        padding: 9px;
+        font-size: 13px;
+    }
+
+}

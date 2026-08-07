@@ -61,7 +61,7 @@ setTimeout(() => {
     if (attendance === "YES") {
 
         window.location.href =
-            "letscelebrate.html";
+            "https://danslyn.github.io/escabal/letscelebrate";
 
     } //else {
 

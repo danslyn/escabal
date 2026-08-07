@@ -8,8 +8,12 @@
 </head>
 <body>
 
-<h1 class="title">With grateful hearts and joyful smiles, <br> we invite you to join us in celebrating <br> Uno’s Dedication and 1st Birthday.
-</h1>
+<div class="invitation-text">
+    With grateful hearts and joyful smiles,<br>
+    we invite you to join us in celebrating<br>
+    <h2>Uno’s Dedication and 1st Birthday.</h2>
+</div>
+
 <form id="rsvpForm"
       action=""
       class="form"
@@ -18,7 +22,7 @@
     <input
         type="text"
         name="name"
-        placeholder="Your Name"
+        placeholder="Ano uli Name mo?"
         required
     >
 
@@ -32,6 +36,7 @@
         </button>
 
         <button
+        id="noButton"
             type="button"
             class="rsvp-button"
             data-attendance="NO">
@@ -54,14 +59,22 @@
 
         <div class="loader"></div>
 
-        <h3>Sending...</h3>
+        <h3>Saglit..</h3>
 
         <p>
-            Please wait while we record your response.
+            SS ko lang, para laka takas.
         </p>
 
     </div>
 
+</div>
+
+<div id="errorPopup" class="error-popup">
+    <div class="error-popup-box">
+        <h2>Oops! 😅</h2>
+        <p id="errorMessage">Ngek, hindi nag-send. Ulitin mo!</p>
+        <button id="errorOkButton">OK</button>
+    </div>
 </div>
 
 <script src="email.js"></script>

@@ -76,7 +76,7 @@ setTimeout(() => {
     // Hide popup if there was an error
     sendingPopup.style.display = "none";
 
-    showError("Hal, Bat kaya hindi nag send?");
+    showError("Hala, Bat kaya hindi nag send?");
 
     buttons.forEach(btn => {
         btn.disabled = false;

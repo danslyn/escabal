@@ -173,19 +173,29 @@ body {
     color: #f7f1f1;
 }
 
-.form{
+.form {
+    width: 100%;
     text-align: center;
-    align-content: center;
 }
-.form input{
-    text-align: center;
+
+.form input {
+    display: block;
+    box-sizing: border-box;
+
+    width: min(550px, 85%);
     height: 50px;
-    width: 550px;
+
     margin: 40px auto 10px;
+    padding: 0 20px;
+
+    text-align: center;
+
     font-size: 20px;
     font-weight: bolder;
     font-family: 'Sis';
+
     border-radius: 50px;
+    border: 1px solid #777;
 }
 /*.attendance-buttons .rsvp-button{
     padding: 14px 30px;
@@ -406,42 +416,40 @@ body {
     }
 
     /* Name input */
+    @media (max-width: 480px) {
+
     .form {
         width: 100%;
+        max-width: 100%;
     }
 
     .form input {
-        box-sizing: border-box;
-
         width: 85%;
-        max-width: none;
-
+        max-width: 85%;
         height: 45px;
 
         margin: 25px auto 10px;
+        padding: 0 15px;
 
         font-size: 16px;
-        padding: 0 15px;
+        box-sizing: border-box;
     }
 
-    /* YES / NO buttons */
     .attendance-buttons {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-
         gap: 12px;
-
-        width: 100%;
     }
 
     .rsvp-button {
         width: 115px;
+        max-width: 40%;
         padding: 10px;
-
         font-size: 14px;
     }
-
+}
     /* Sending popup */
     .sending-box {
         box-sizing: border-box;

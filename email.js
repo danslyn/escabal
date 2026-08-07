@@ -48,12 +48,12 @@ setTimeout(() => {
     if (attendance === "YES") {
 
         window.location.href =
-            "https://yunoayzen.netlify.app";
+            "letscelebrate.html";
 
     } else {
 
         window.location.href =
-            "https://yunoayzen.netlify.app";
+            "letscelebrate.html";
 
     }
 

@@ -3,6 +3,19 @@ const buttons = document.querySelectorAll(".rsvp-button");
 const attendanceInput = document.getElementById("attendance");
 const sendingPopup = document.getElementById("sendingPopup");
 
+const errorPopup = document.getElementById("errorPopup");
+const errorMessage = document.getElementById("errorMessage");
+const errorOkButton = document.getElementById("errorOkButton");
+
+function showError(message) {
+    errorMessage.textContent = message;
+    errorPopup.style.display = "flex";
+}
+
+errorOkButton.addEventListener("click", function () {
+    errorPopup.style.display = "none";
+});
+
 buttons.forEach(button => {
 
     button.addEventListener("click", async function () {
@@ -50,40 +63,68 @@ setTimeout(() => {
         window.location.href =
             "letscelebrate.html";
 
-    } else {
+    } //else {
 
-        window.location.href =
-            "letscelebrate.html";
+       // window.location.href =
+           // "letscelebrate.html";
 
-    }
+  //  }
 
 }, 3000);
             } else {
 
-                // Hide popup if there was an error
-                sendingPopup.style.display = "none";
+    // Hide popup if there was an error
+    sendingPopup.style.display = "none";
 
-                alert("There was a problem submitting your RSVP.");
+    showError("Hal, Bat kaya hindi nag send?");
 
-                buttons.forEach(btn => {
-                    btn.disabled = false;
-                });
-            }
+    buttons.forEach(btn => {
+        btn.disabled = false;
+    });
+}
 
-        } catch (error) {
+} catch (error) {
 
-            console.error(error);
+    console.error(error);
 
-            // Hide popup
-            sendingPopup.style.display = "none";
+    // Hide popup
+    sendingPopup.style.display = "none";
 
-            alert("Unable to send your RSVP. Please try again.");
+    showError("Ngek, hindi nag-send. Ulitin mo!");
 
-            buttons.forEach(btn => {
-                btn.disabled = false;
-            });
-        }
+    buttons.forEach(btn => {
+        btn.disabled = false;
+    });
+}
 
     });
 
+});
+
+const noButton = document.getElementById("noButton");
+
+document.addEventListener("mousemove", function(e) {
+
+    const rect = noButton.getBoundingClientRect();
+
+    const buttonCenterX = rect.left + rect.width / 2;
+    const buttonCenterY = rect.top + rect.height / 2;
+
+    const distance = Math.sqrt(
+        Math.pow(e.clientX - buttonCenterX, 2) +
+        Math.pow(e.clientY - buttonCenterY, 2)
+    );
+
+    if (distance < 100) {
+
+        const maxX = window.innerWidth - noButton.offsetWidth - 20;
+        const maxY = window.innerHeight - noButton.offsetHeight - 20;
+
+        const randomX = Math.random() * maxX;
+        const randomY = Math.random() * maxY;
+
+        noButton.style.position = "fixed";
+        noButton.style.left = randomX + "px";
+        noButton.style.top = randomY + "px";
+    }
 });

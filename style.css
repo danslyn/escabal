@@ -207,12 +207,13 @@ body {
  
     font-family: "Sis";
   font-size: 30px;
-    text-decoration: none;
+text-decoration-color: #f7f7f7;
     color: #cfb20d;
     display: inline-block;
     transition: transform 0.25s ease, color 0.25s ease;
     font-weight: bold;
 }
+
 
 .event-location a:hover {
    transform: scale(1.08);
